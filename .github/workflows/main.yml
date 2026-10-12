@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch news file
-        uses: foxtrotperry/fetch-file-action@v0
+        uses: foxtrotperry/fetch-file-action@v0-alpha
         with:
           url: 'https://geometrydashfiles.b-cdn.net/news/news.dat'
           path: 'toupload/'
