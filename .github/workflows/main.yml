@@ -3,6 +3,7 @@ run-name: Downloading Geometry Dash News
 on:
   schedule:
     - cron: '0 0 * * 1-6'
+  push:
 jobs:
   get-news:
     runs-on: ubuntu-latest
