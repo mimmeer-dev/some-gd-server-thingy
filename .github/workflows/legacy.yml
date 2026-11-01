@@ -1,5 +1,5 @@
 name: Get GD News
-run-name: Downloading Geometry Dash News
+run-name: Downloading Geometry Dash News (Legacy)
 on:
   schedule:
     - cron: '0 0 * * 1-6'
