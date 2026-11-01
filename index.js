@@ -93,13 +93,16 @@ let about = {
     "header": header
 }
 
-let titles = []
+let articles = []
 
 for (let article of list) {
-    titles.push(article.newsTitle)
+    articles.push({
+        "title": article.newsTitle,
+        "date": article.date
+    })
 }
 
-about.titles = titles
+about.articles = articles
 
 let aboutFile = fs.createWriteStream("./output/basics.json", "utf-8");
 aboutFile.write(JSON.stringify(about))
