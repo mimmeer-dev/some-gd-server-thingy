@@ -11,7 +11,7 @@ on:
 jobs:
   fetch:
     name: Run GD News Script
-    runs-on: 
+    runs-on: ubuntu-latest
     steps:
       - name: Setup Node.JS environment
        uses: actions/setup-node@v7.1.0
