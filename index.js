@@ -98,7 +98,8 @@ let articles = []
 for (let article of list) {
     articles.push({
         "title": article.newsTitle,
-        "date": article.date
+        "date": article.date,
+        "idx": article.entryId
     })
 }
 
