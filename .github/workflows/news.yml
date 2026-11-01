@@ -10,6 +10,7 @@ on:
 
 jobs:
   fetch:
+    name: Fetch & Parse News
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -18,4 +19,23 @@ jobs:
         uses: actions/setup-node@v7.1.0
         with:
           node-version: 26.x
-      - run: ls -la
+      - run: npm run run
+        name: Run NodeJS Script
+      - name: Upload artifacts
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output
+  deploy:
+    needs: fetch
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
