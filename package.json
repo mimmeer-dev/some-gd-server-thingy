@@ -1,0 +1,24 @@
+{
+  "name": "actions_fetchgdnews",
+  "version": "1.0.0",
+  "description": "Fetch GD News - for some_gd_server_thingy",
+  "homepage": "https://github.com/mimmeer-dev/some-gd-server-thingy#readme",
+  "bugs": {
+    "url": "https://github.com/mimmeer-dev/some-gd-server-thingy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimmeer-dev/some-gd-server-thingy.git"
+  },
+  "license": "MIT",
+  "author": "mimmeer",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node ."
+  },
+  "dependencies": {
+    "url-safe-base64": "^1.3.0"
+  }
+}
