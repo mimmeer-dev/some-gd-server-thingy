@@ -1,0 +1,20 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+run-name: Decode GD News
+on:
+  schedule:
+    - cron: '0 0 * * 1-6'
+  push:
+
+jobs:
+  fetch:
+    name: Run GD News Script
+    runs-on: 
+    steps:
+      - name: Setup Node.JS environment
+       uses: actions/setup-node@v7.1.0
+       with:
+         node-version: 26.x
+      - run: ls
