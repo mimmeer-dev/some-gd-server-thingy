@@ -78,9 +78,11 @@ console.log(`News Parsed! ${header.articles} articles found.`)
 
 header.imgCount = images.length
 
-fs.rmSync("./output/", {
-    recursive: true
-})
+if (fs.existsSync("./output/")) {
+    fs.rmSync("./output/", {
+        recursive: true
+    })
+}
 fs.mkdirSync("./output/")
 let resultFile = fs.createWriteStream("./output/result.json", "utf-8");
 resultFile.write(JSON.stringify(list))
