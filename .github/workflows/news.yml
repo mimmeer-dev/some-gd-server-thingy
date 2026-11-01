@@ -10,7 +10,6 @@ on:
 
 jobs:
   fetch:
-    name: Run GD News Script
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node.JS environment
